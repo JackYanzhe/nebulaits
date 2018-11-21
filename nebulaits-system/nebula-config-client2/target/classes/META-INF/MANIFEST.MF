@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: nebula-config-client2
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: zheyan.yan
+Implementation-Vendor-Id: cn.nebulaits
+Build-Jdk: 1.8.0_05
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/nebulaits-system/nebula-config-client2
+Created-By: Maven Integration for Eclipse
+
