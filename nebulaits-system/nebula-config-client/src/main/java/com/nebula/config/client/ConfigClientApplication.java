@@ -27,7 +27,7 @@ public class ConfigClientApplication {
 		
 	}
 
-	@Value("${spring.rabbitmq.host6}")
+	@Value("${spring.rabbitmq.host3}")
 	String foo;
 
 	@RequestMapping(value = "/hi")

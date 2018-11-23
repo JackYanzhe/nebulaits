@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: nebula-dingding
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: zheyan.yan
+Implementation-Vendor-Id: cn.nebulaits
+Build-Jdk: 1.8.0_05
+Implementation-URL: http://maven.apache.org
+Created-By: Maven Integration for Eclipse
+
