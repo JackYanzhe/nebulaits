@@ -1,5 +1,9 @@
 package com.nebula.api.service;
 
-public interface NebulaApiService {
+import java.util.List;
 
+import com.nebula.api.entity.ErrorHandleLogVo;
+
+public interface NebulaApiService {
+	List<ErrorHandleLogVo> getLogInfos();
 }
