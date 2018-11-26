@@ -20,6 +20,7 @@
     <module>nebula-dingding</module>
     <module>nebula-api</module>
     <module>nebula-feweb</module>
+    <module>nebula-zuul</module>
   </modules>
   
   <parent>

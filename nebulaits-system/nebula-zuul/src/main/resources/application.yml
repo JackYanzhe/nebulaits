@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8768
+spring:
+  application:
+    name: nebula-zuul
+zuul:
+  routes:
+    api-a:
+      path: /api-dingding/**
+      serviceId: nebula-dingding
+    api-b:
+      path: /api-api/**
+      serviceId: nebula-api
