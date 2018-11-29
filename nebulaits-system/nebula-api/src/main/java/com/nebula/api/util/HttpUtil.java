@@ -18,6 +18,7 @@ import java.net.*;
 public class HttpUtil {
 
     private static final int ERROR_CODE = 400;
+    //private static final int FAIL = 400;
 
     /**
      * 发送传参的Post请求
@@ -246,6 +247,70 @@ public class HttpUtil {
                 }
             } catch (Exception e2) {
                 e2.printStackTrace();
+            }
+        }
+        return result;
+    }
+    
+    /**
+     * 向指定 URL 发送POST方法的请求
+     *
+     * @param url
+     * @param json
+     * @param auth
+     * @return
+     */
+    public static String doPost(String url, String json, String auth) {
+        PrintWriter pWriter = null;
+        BufferedReader bReader = null;
+        String result = "";
+
+        try {
+            URL realUrl = new URL(url);
+            URLConnection conn = null;
+
+            // 打开和URL之间的连接
+            conn = realUrl.openConnection();
+            // 设置通用的请求属性
+            conn.setRequestProperty("Authorization", auth);
+            conn.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+            // 发送POST请求必须设置如下两行
+            conn.setDoOutput(true);
+            conn.setDoInput(true);
+
+            // 获取URLConnection对象对应的输出流
+            pWriter = new PrintWriter(conn.getOutputStream());
+            // 写入json参数
+            pWriter.write(json);
+            // flush输出流的缓冲
+            pWriter.flush();
+            // 定义BufferedReader输入流来读取URL的响应
+            HttpURLConnection httpConn = (HttpURLConnection) conn;
+            if (httpConn.getResponseCode() >= ERROR_CODE) {
+                bReader = new BufferedReader(new InputStreamReader(httpConn.getErrorStream()));
+            } else {
+                bReader = new BufferedReader(new InputStreamReader(httpConn.getInputStream()));
+            }
+            String line;
+            while ((line = bReader.readLine()) != null) {
+                result += line;
+            }
+
+        } catch (Exception e) {
+            System.out.println("发送 POST 请求出现异常！" + e);
+            e.printStackTrace();
+        }
+        // 使用finally块来关闭输出流、输入流
+        finally {
+            try {
+                if (pWriter != null) {
+                    pWriter.close();
+                }
+                if (bReader != null) {
+                    bReader.close();
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
             }
         }
         return result;

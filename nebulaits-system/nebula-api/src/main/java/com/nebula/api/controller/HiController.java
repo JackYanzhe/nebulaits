@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.nebula.api.common.annotation.UserLoginToken;
 import com.nebula.api.entity.ErrorHandleLogVo;
 import com.nebula.api.service.NebulaApiService;
 import com.nebula.api.service.SchedualServiceHi;
@@ -40,6 +41,7 @@ public class HiController {
 	 * 微服务查询接口测试
 	 * @return
 	 */
+    @UserLoginToken
 	@RequestMapping("/getApiLogs")
 	@ResponseBody
 	public JsonResult getLogs() {

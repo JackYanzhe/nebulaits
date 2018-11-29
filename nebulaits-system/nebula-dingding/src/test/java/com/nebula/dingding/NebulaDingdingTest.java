@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.nebula.dingding.dao.AuthTokenDao;
 import com.nebula.dingding.dao.HandErrorLogDao;
+import com.nebula.dingding.entity.AuthToken;
 import com.nebula.dingding.entity.ErrorHandleLogVo;
 
 @RunWith(SpringRunner.class)
@@ -17,6 +19,9 @@ public class NebulaDingdingTest {
 
 	@Autowired
     HandErrorLogDao handErrorLogDao;
+	//autowired:以名字注入  resurce: 以类型注入
+	@Autowired
+	AuthTokenDao authTokenDao;
 	
 	/**
 	 * 测试微服务数据库连接测试（读取远程配置）
@@ -30,4 +35,18 @@ public class NebulaDingdingTest {
 		}
 		
 	}
+	
+	/**
+	 * 测试微服务数据库连接测试（读取远程配置）
+	 */
+	@Test
+	public void testGetAppkey() throws Exception {
+		List<AuthToken> authInfoByAppId = authTokenDao.getAuthInfoByAppId("1");
+		
+		for (AuthToken authToken : authInfoByAppId) {
+			System.out.println(authToken.toString());
+		}
+		
+	}
+	
 }
