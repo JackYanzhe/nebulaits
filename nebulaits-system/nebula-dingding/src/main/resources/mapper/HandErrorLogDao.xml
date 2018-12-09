@@ -5,4 +5,14 @@
   <select id="getLogInfos" resultType="com.nebula.dingding.entity.ErrorHandleLogVo">
 		select id,fieldName,type,typeDetail,result,date,memo from  sihengpaypal.paypal_handle_log
   </select>
+  
+  
+  <select id="judgeErrorLogs" resultType="com.nebula.dingding.entity.ErrorHandleLogVo">
+		select id,fieldName,type,typeDetail,result,date,memo from  sihengpaypal.paypal_handle_log where memo =#{memo}
+  </select>
+  
+  <insert id="insertLogInfo">
+        insert into sihengpaypal.paypal_handle_log(fieldName,type,typeDetail,result,date,memo)
+        values(#{fieldName},#{type},#{typeDetail},#{result},#{date},#{memo})
+  </insert>
 </mapper>

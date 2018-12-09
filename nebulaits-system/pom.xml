@@ -15,32 +15,31 @@
   	<module>nebula-eureka-server</module>
   	<module>nebula-config-server</module>
   	<module>nebula-config-client</module>
-  	<module>nebula-config-client2</module>
-  	<module>nebula-config</module>
     <module>nebula-dingding</module>
     <module>nebula-api</module>
     <module>nebula-feweb</module>
     <module>nebula-zuul</module>
+    <module>nebula-common</module>
   </modules>
   
-  <parent>
+  <!-- <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.3.RELEASE</version>
         <relativePath/>
-  </parent>
+  </parent> -->
 
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <mysql.driver.version>5.1.30</mysql.driver.version>
-        <alibaba.fastjson.version>1.2.32</alibaba.fastjson.version>
-        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+       <!--  <mysql.driver.version>5.1.30</mysql.driver.version>
+        <alibaba.fastjson.version>1.2.32</alibaba.fastjson.version> -->
+        <!-- <spring-cloud.version>Finchley.RELEASE</spring-cloud.version> -->
     </properties>
 
-     <dependencies>
+     <!-- <dependencies>
          <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
@@ -59,20 +58,20 @@
             <scope>test</scope>
         </dependency>
         
-        <!-- 支持 @ConfigurationProperties 注解 -->
+        支持 @ConfigurationProperties 注解
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
 
-        <!-- log related -->
-        <dependency> <!-- exclude掉spring-boot的默认log配置 -->
+        log related
+        <dependency> exclude掉spring-boot的默认log配置
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
-        <dependency> <!-- exclude掉缺省的jdbc配置 -->
+        <dependency> exclude掉缺省的jdbc配置
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
             <exclusions>
@@ -83,12 +82,12 @@
             </exclusions>
         </dependency>
 		
-		<!--SpringBoot的Redis支持-->
+		SpringBoot的Redis支持
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-        <!--SpringBoot缓存支持-->
+        SpringBoot缓存支持
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
@@ -100,7 +99,7 @@
 		    <classifier>jdk15</classifier>
 		</dependency>
 
-        <!--protostuff 对象序列化依赖-->
+        protostuff 对象序列化依赖
         <dependency>
             <groupId>com.dyuproject.protostuff</groupId>
             <artifactId>protostuff-core</artifactId>
@@ -112,21 +111,21 @@
             <version>1.0.12</version>
         </dependency>
 
-        <!--数据库连接池-->
+        数据库连接池
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.0.28</version>
         </dependency>
 
-        <!--mybatis spring boot依赖-->
+        mybatis spring boot依赖
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>1.2.0</version>
         </dependency>
 
-        <!--mybatis代码生成工具-->
+        mybatis代码生成工具
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
@@ -138,26 +137,26 @@
             <artifactId>fastjson</artifactId>
             <version>${alibaba.fastjson.version}</version>
         </dependency>
-        <!--mybatis分页-->
+        mybatis分页
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>
             <version>4.2.1</version>
         </dependency>
 
-        <!--sqlserver-->
+        sqlserver
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>sqljdbc4</artifactId>
             <version>4.0</version>
         </dependency>
-		<!-- mysql jdbc driver -->
+		mysql jdbc driver
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-        <!--postgresql-->
+        postgresql
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -168,7 +167,7 @@
             <artifactId>gson</artifactId>
             </dependency>
             
-        <!--引用itext-->
+        引用itext
         <dependency>
             <groupId>com.itextpdf</groupId>
             <artifactId>itextpdf</artifactId>
@@ -196,13 +195,13 @@
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-commons</artifactId>
             </dependency>
-        <!-- POI -->
+        POI
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>3.16</version>
         </dependency>
-        <!--时间处理工具 -->
+        时间处理工具
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
@@ -212,7 +211,7 @@
 		    <artifactId>barcode4j</artifactId>
 		    <version>2.1</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		https://mvnrepository.com/artifact/commons-io/commons-io
 		<dependency>
 		    <groupId>commons-io</groupId>
 		    <artifactId>commons-io</artifactId>
@@ -225,7 +224,7 @@
 		    <version>1.18</version>
 		</dependency>
        
-         <!-- Http -->
+         Http
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
@@ -237,7 +236,7 @@
             <artifactId>commons-httpclient</artifactId>
             <version>3.0.1</version>
         </dependency>
-        <!-- 文件上传 -->
+        文件上传
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
@@ -248,9 +247,9 @@
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.2.2</version>
 		</dependency>
-    </dependencies>
+    </dependencies>-->
 
-    <dependencyManagement>
+    <!-- <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -259,8 +258,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-        </dependencies>
-    </dependencyManagement>
+        </dependencies> 
+    </dependencyManagement> -->
 
     <build>
         <plugins>
