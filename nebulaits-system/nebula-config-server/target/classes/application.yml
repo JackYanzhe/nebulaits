@@ -1,0 +1,22 @@
+server:
+  port: 8762
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://47.100.29.15:8761/eureka/
+  instance:
+    hostname: 47.100.29.15
+    instance-id: 47.100.29.15:${server.port}
+spring:
+  application:
+    name: nebula-config-server
+  cloud:
+    config:
+      label: nebula-branch
+      server:
+        git:
+          uri: https://github.com/JackYanzhe/nebulaits
+          searchPaths: /nebulaits-system/nebula-config/**
+          username: 
+          password: 
+      

@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nebula-feweb:
+    image: nebula/nebula-feweb
+    restart: always
+    ports:
+      - 8767:8767
+  nebula-api:
+    image: nebula/nebula-api
+    restart: always
+    ports:
+      - 8766:8766
+
+

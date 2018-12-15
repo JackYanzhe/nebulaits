@@ -1,0 +1,20 @@
+version: '3'
+services:
+  nebula-eureka-server:
+    build: nebula-eureka-server
+    ports:
+      - 8761:8761
+  nebula-config-server:
+    build: nebula-config-server
+    ports:
+      - 8762:8762
+  nebula-feweb:
+    build: nebula-feweb
+    ports:
+      - 8767:8767
+  nebula-api:
+    build: nebula-api
+    ports:
+      - 8766:8766
+
+

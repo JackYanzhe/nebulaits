@@ -14,7 +14,6 @@
   <modules>
   	<module>nebula-eureka-server</module>
   	<module>nebula-config-server</module>
-  	<module>nebula-config-client</module>
     <module>nebula-dingding</module>
     <module>nebula-api</module>
     <module>nebula-feweb</module>
@@ -70,7 +69,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
+                                                 
         <dependency> exclude掉缺省的jdbc配置
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>

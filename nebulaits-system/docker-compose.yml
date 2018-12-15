@@ -1,0 +1,18 @@
+version: '3'
+services:
+  nebula-eureka-server:
+    image: nebula/nebula-eureka-server
+    hostname: nebula-eureka-server
+    restart: always
+    ports:
+      - 8761:8761
+  nebula-config-server:
+    image: nebula/nebula-config-server
+    hostname: nebula-config-server
+    depends_on:
+        - nebula-eureka-server
+    restart: always
+    ports:
+      - 8762:8762
+
+

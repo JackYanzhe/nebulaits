@@ -1,16 +1,13 @@
 server:
   port: 8761
-  
-#通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server
 eureka:
   instance:
-    hostname: localhost
+    prefer-ip-address: true
+    instance-id: 47.100.29.15:${server.port}
+#服务注册中心实例的主机名
+    hostname: 47.100.29.15
   client:
     registerWithEureka: false
     fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
-spring:
-  application:
-    name: eurka-server
+    
