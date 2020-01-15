@@ -20,7 +20,7 @@ spring:
       trace:
         enabled: true
   rabbitmq:
-    host: 47.100.29.15
+    host: 139.224.226.138
     port: 5672
     username: admin
     password: 123456

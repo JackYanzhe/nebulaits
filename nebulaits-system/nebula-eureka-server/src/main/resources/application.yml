@@ -3,9 +3,9 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id: 47.100.29.15:${server.port}
+    instance-id: 139.224.226.138:${server.port}
 #服务注册中心实例的主机名
-    hostname: 47.100.29.15
+    hostname: 139.224.226.138
   client:
     registerWithEureka: false
     fetchRegistry: false

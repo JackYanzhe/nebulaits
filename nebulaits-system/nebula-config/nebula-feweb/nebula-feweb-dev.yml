@@ -4,13 +4,13 @@ spring:
           prefix: /WEB-INF/views/
           suffix: .jsp
     rabbitmq:
-        host: 47.100.29.15
+        host: 139.224.226.138
         port: 5672
         username: admin
         password: 123456
     datasource:
         name: mysql
-        url: jdbc:mysql://47.100.29.15:3306/sihengpaypal?useSSL=false&allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+        url: jdbc:mysql://139.224.226.138:3306/sihengpaypal?useSSL=false&allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
 #        username: root
 #        password: root
         username: root
@@ -33,7 +33,7 @@ spring:
         maxOpenPreparedStatements: 20
         multiStatementAllow: true
     redis:
-        host: 47.100.29.15
+        host: 139.224.226.138
         password: 123456
         port: 6379
         timeout: 10000  #redis 连接超时时间ms

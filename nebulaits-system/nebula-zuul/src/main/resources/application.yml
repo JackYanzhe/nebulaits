@@ -1,10 +1,10 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://47.100.29.15:8761/eureka/
+      defaultZone: http://139.224.226.138:8761/eureka/
   instance:
-    hostname: 47.100.29.15
-    instance-id: 47.100.29.15:${server.port}
+    hostname: 139.224.226.138
+    instance-id: 139.224.226.138:${server.port}
 server:
   port: 8768
 spring:
