@@ -12,7 +12,7 @@ spring:
     name: nebula-config-server
   cloud:
     config:
-      label: nebula-branch
+      label: master
       server:
         git:
           uri: https://github.com/JackYanzhe/nebulaits

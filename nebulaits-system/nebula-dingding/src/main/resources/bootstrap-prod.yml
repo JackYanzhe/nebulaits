@@ -10,8 +10,8 @@ eureka:
 spring:
   cloud:
     config:
-      profile: dev
-      label: nebula-branch
+      profile: master
+      label: master
       discovery:
         enabled: true
         serviceId: nebula-config-server
