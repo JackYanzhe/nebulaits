@@ -161,7 +161,7 @@ public class DingDingLoginController {
 			mailMqVo.setUsername(user.name);
 			mailMqVo.setContent("已确认您的身份为该公司员工，成功登录！登录相关信息如下：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+userJson.toJSONString());
 			List<String> fileUrlList= new ArrayList<>();
-			fileUrlList.add("http://47.100.29.15/group1/M00/00/00/rBO4UVvrlKuAB6DvAAD7WcgC1lU725.jpg");
+			fileUrlList.add("http://139.224.226.138/group1/M00/00/00/rBO4UVvrlKuAB6DvAAD7WcgC1lU725.jpg");
 			mailMqVo.setFileUrls(fileUrlList);
 	        //发送邮件
 	        EmailUtil.sendTemplateMail(mailMqVo, mailSender, configurer);
