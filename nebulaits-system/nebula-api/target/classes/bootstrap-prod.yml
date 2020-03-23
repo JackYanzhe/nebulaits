@@ -3,17 +3,17 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://47.100.29.15:8761/eureka/
+      defaultZone: http://139.224.226.138:8761/eureka/
   instance:
-    hostname: 47.100.29.15
-    instance-id: 47.100.29.15:${server.port}
+    hostname: 139.224.226.138
+    instance-id: 139.224.226.138:${server.port}
 spring:
   application:
     name: nebula-api
   cloud:
     config:
-      profile: dev
-      label: nebula-branch
+      profile: master
+      label: master
       discovery:
         enabled: true
         serviceId: nebula-config-server
@@ -22,10 +22,15 @@ spring:
       trace:
         enabled: true
   rabbitmq:
-    host: 47.100.29.15
+    host: 139.224.226.138
     port: 5672
     username: admin
     password: 123456
+  redis:
+    host: 139.224.226.138
+    password: yzhy@123456%
+    port: 6666
+    timeout: 10000  #redis 连接超时时间ms
 management:
   endpoints:
     web:

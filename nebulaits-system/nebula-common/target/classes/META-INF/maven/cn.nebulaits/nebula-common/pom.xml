@@ -121,12 +121,12 @@
             <version>4.2.1</version>
         </dependency>
 
-        <!--sqlserver-->
-        <dependency>
+        <!--sqlserver 暂时注释掉-->
+        <!-- <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>sqljdbc4</artifactId>
             <version>4.0</version>
-        </dependency>
+        </dependency> -->
 		<!-- mysql jdbc driver -->
 		<dependency>
 			<groupId>mysql</groupId>
