@@ -26,6 +26,11 @@ spring:
     port: 5672
     username: admin
     password: 123456
+  redis:
+    host: 139.224.226.138
+    password: yzhy@123456%
+    port: 6666
+    timeout: 10000  #redis 连接超时时间ms
 management:
   endpoints:
     web:
